@@ -7,6 +7,7 @@ using namespace std;
 class Student
 {
 public:
+    Student();
     void SetStudentID(string student_ID) { studentID = student_ID; }
     void SetFirst(string firstName) { first = firstName; }
     void SetLast(string lastName) { last = lastName; }
@@ -19,8 +20,9 @@ public:
     string GetLastName() const;
     string GetEmailAddress() const;
     int GetAge() const;
-    int GetDaysToComplete() const;
+    vector<int> GetDaysToComplete() const;
     DegreeProgram GetProgram() const;
+    void Print();
 
 private:
     string studentID;
@@ -30,4 +32,24 @@ private:
     int age;
     vector<int> days;
     DegreeProgram program;
+};
+
+Student::Student()
+{
+    studentID = "NULL";
+    first = "NoFirst";
+    last = "NoLast";
+    email = "unknown@unknown.com";
+    age = -1;
+    days = {};
+    program = DP_SOFTWARE;
+};
+
+void Student::Print()
+{
+    cout << studentID << "\t" << "First Name: " << first << "Last Name: " << last << "\t" << "Email: " << email << "\t" << "Age: " << age << "\t" << "daysInCourse: " << "{";
+    for (int i = 0; i < days.size(); ++i)
+    {
+        int currDay = days.at(i)
+    };
 };
