@@ -13,7 +13,7 @@ public:
     void SetEmail(string emailAddress) { email = emailAddress; }
     void SetAge(int yearsAge) { age = yearsAge; }
     void CompletedCourse(vector<int> daysCompleteCourse) { days = daysCompleteCourse; }
-    void SetProgram(DegreeProgram) { DegreeProgram; }
+    void SetProgram(DegreeProgram);
     string GetStudentID() const;
     string GetFirstName() const;
     string GetLastName() const;
