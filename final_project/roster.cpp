@@ -7,7 +7,8 @@
 using namespace std;
 
 vector<string> studentData(5);
-=
+
+string studentTable[5] =
 
     {"A1,John,Smith,John1989@gm ail.com,20,30,35,40,SECURITY",
 
@@ -21,4 +22,4 @@ vector<string> studentData(5);
 
 Student *classRosterArray[5];
 
-studentData.at(0) = studentData.substr(0, 1);
+studentData.at(0) = studentTable[0];

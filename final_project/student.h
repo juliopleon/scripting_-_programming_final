@@ -1,3 +1,6 @@
+#ifndef STUDENT_H
+#define STUDENT_H
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -62,3 +65,5 @@ void Student::Print()
     cout << "Degree" << endl;
     cout << "\t" << "Program: " << program << endl;
 };
+
+#endif

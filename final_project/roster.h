@@ -1,8 +1,8 @@
-#include <iostream>
+#ifndef ROSTER_H
+#define ROSTER_H
+
 #include <string>
-#include <array>
 #include "student.h"
-using namespace std;
 
 class Roster
 {
@@ -21,7 +21,8 @@ private:
     Student *classRosterArray[5];
 };
 
-Roster::~Roster()
-{
+Roster::~Roster() {
     // FIX ME - destructor
-}
+};
+
+#endif
