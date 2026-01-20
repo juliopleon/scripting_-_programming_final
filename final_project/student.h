@@ -8,20 +8,20 @@ class Student
 {
 public:
     Student();
-    void SetStudentID(string student_ID) { studentID = student_ID; }
-    void SetFirst(string firstName) { first = firstName; }
-    void SetLast(string lastName) { last = lastName; }
-    void SetEmail(string emailAddress) { email = emailAddress; }
-    void SetAge(int yearsAge) { age = yearsAge; }
-    void CompletedCourse(vector<int> daysCompleteCourse) { days = daysCompleteCourse; }
-    void SetProgram(DegreeProgram);
-    string GetStudentID() const;
-    string GetFirstName() const;
-    string GetLastName() const;
-    string GetEmailAddress() const;
-    int GetAge() const;
-    vector<int> GetDaysToComplete() const;
-    DegreeProgram GetProgram() const;
+    void setStudentID(string student_ID) { studentID = student_ID; }
+    void setFirst(string firstName) { first = firstName; }
+    void setLast(string lastName) { last = lastName; }
+    void setEmail(string emailAddress) { email = emailAddress; }
+    void setAge(int age) { age = age; }
+    void daysCompletedCourse(vector<int> daysCompleteCourse) { days = daysCompleteCourse; }
+    void setProgram(DegreeProgram);
+    string getStudentID() const;
+    string getFirstName() const;
+    string getLastName() const;
+    string getEmailAddress() const;
+    int getAge() const;
+    vector<int> getDaysToComplete() const;
+    DegreeProgram getProgram() const;
     void Print();
 
 private:
@@ -47,9 +47,18 @@ Student::Student()
 
 void Student::Print()
 {
-    cout << studentID << "\t" << "First Name: " << first << "Last Name: " << last << "\t" << "Email: " << email << "\t" << "Age: " << age << "\t" << "daysInCourse: " << "{";
+    cout << studentID << "\t" << "First Name: " << first << "Last Name: " << last << "\t" << "Email: " << email << "\t" << "Age: " << age << "\t" << "daysInCourse: ";
+    cout << "{";
     for (int i = 0; i < days.size(); ++i)
     {
-        int currDay = days.at(i)
-    };
+        cout << days.at(i);
+
+        if (!days.size() - 1)
+        {
+            cout << ", ";
+        }
+    }
+    cout << "} ";
+    cout << "Degree" << endl;
+    cout << "\t" << "Program: " << program << endl;
 };
