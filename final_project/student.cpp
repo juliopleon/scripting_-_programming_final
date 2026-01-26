@@ -41,7 +41,7 @@ void Student::SetDaysCompleteCourse(int daysCompleteCourse[3])
     }
 };
 
-void Student::SetProgram(DegreeProgram degreeProgram)
+void Student::SetDegreeProgram(DegreeProgram degreeProgram)
 {
 
     degree = degreeProgram;

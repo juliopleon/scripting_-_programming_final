@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include "student.h"
+using namespace std;
 
 class Roster
 {
@@ -20,10 +21,6 @@ public:
 
 private:
     vector<Student *> classRosterArray;
-};
-
-Roster::~Roster() {
-    // FIX ME - destructor
 };
 
 #endif

@@ -3,7 +3,6 @@
 
 #include <string>
 #include "degree.h"
-#include "roster.h"
 using namespace std;
 
 class Student

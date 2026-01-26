@@ -10,7 +10,7 @@ enum DegreeProgram
     SOFTWARE
 };
 
-std::string DegreeProgramToString(DegreeProgram degreeProgram)
+std::string DegreeProgramToString(DegreeProgram degreeProgram) // FIX ME - Duplicate issue copying this function more than once!! .h is for declaration not initialize so duplicate unless inline
 {
     if (degreeProgram == SECURITY)
     {
