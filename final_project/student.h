@@ -1,9 +1,7 @@
 #ifndef STUDENT_H
 #define STUDENT_H
 
-#include <iostream>
 #include <string>
-#include <vector>
 #include "degree.h"
 using namespace std;
 
@@ -16,15 +14,15 @@ public:
     void SetLast(string lastName) { last = lastName; }
     void SetEmail(string emailAddress) { email = emailAddress; }
     void SetAge(int yearsAge) { age = yearsAge; }
-    void DaysCompletedCourse(vector<int> daysCompleteCourse) { days = daysCompleteCourse; }
+    void DaysCompletedCourse(int daysCompleteCourse[3]);
     void SetProgram(DegreeProgram degreeProgram);
-    string GetStudentID() { const return studentID };
-    string GetFirstName() const { return first };
-    string GetLastName() const;
-    string GetEmailAddress() const;
-    int GetAge() const;
-    void GetDaysToComplete() const;
-    DegreeProgram GetProgram() const;
+    string GetStudentID() const { return studentID; }
+    string GetFirstName() const { return first; }
+    string GetLastName() const { return last; }
+    string GetEmailAddress() const { return email; }
+    int GetAge() const { return age; }
+    const int *GetDaysToComplete() const { return days; }
+    DegreeProgram GetProgram() const { return degree; }
     void Print();
 
 private:

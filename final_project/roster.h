@@ -2,6 +2,7 @@
 #define ROSTER_H
 
 #include <string>
+#include <vector>
 #include "student.h"
 
 class Roster
@@ -18,7 +19,7 @@ public:
     // The destructor that will release memory claimed by the roster object. - FIX ME
 
 private:
-    Student *classRosterArray[5];
+    vector<Student *> classRosterArray;
 };
 
 Roster::~Roster() {

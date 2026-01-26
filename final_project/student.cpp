@@ -1,4 +1,6 @@
 #include "student.h"
+#include <iostream>
+#include <string>
 using namespace std;
 
 Student::Student()
@@ -8,24 +10,39 @@ Student::Student()
     last = "NoLast";
     email = "unknown@unknown.com";
     age = -1;
-    days = {};
-    program = DP_SOFTWARE;
+    days[0] = -1;
+    days[1] = -1;
+    days[2] = -1;
+    degree = SOFTWARE;
 };
 
 void Student::Print()
 {
-    cout << studentID << "\t" << "First Name: " << first << "Last Name: " << last << "\t" << "Email: " << email << "\t" << "Age: " << age << "\t" << "daysInCourse: ";
+    cout << studentID << "\t" << "First Name: " << first << "\t" << "Last Name: " << last << "\t" << "Email: " << email << "\t" << "Age: " << age << "\t" << "daysInCourse: ";
     cout << "{";
-    for (int i = 0; i < days.size(); ++i)
+    for (int i = 0; i < 3; ++i)
     {
-        cout << days.at(i);
+        cout << days[i];
 
-        if (!days.size() - 1)
+        if (i < 2)
         {
             cout << ", ";
         }
     }
     cout << "} ";
-    cout << "Degree" << endl;
-    cout << "\t" << "Program: " << program << endl;
+    cout << "Degree Program: " << degree << endl; // FIX ME - needs grab enum value and convert it into a string
 };
+
+void Student::DaysCompletedCourse(int daysCompleteCourse[3])
+{
+    for (int i = 0; i < 3; ++i)
+    {
+        days[i] = daysCompleteCourse[i];
+    }
+};
+
+void Student::SetProgram(DegreeProgram degreeProgram)
+{
+
+    degree = degreeProgram;
+}
