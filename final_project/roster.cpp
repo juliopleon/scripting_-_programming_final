@@ -7,8 +7,18 @@
 #include <array>
 using namespace std;
 
-Roster::add(string studentId)
+Student *studentObj;
+void Roster::add(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram)
 {
-    Student studentObj;
-    Student = new Student(studentObj)
+    studentObj = new Student(studentObj);
+
+    studentObj->SetStudentID(studentID);
+    studentObj->SetFirstName(firstName);
+    studentObj->SetLastName(lastName);
+    studentObj->SetEmail(emailAddress);
+    studentObj->SetAge(age);
+    studentObj->SetDaysCompleteCourse(daysCompleteCourse[3]);
+    studentObj->SetDegreeProgram(degreeProgram);
+
+    classRosterArray.push_back(studentObj);
 }

@@ -3,6 +3,7 @@
 
 #include <string>
 #include "degree.h"
+#include "roster.h"
 using namespace std;
 
 class Student
@@ -10,12 +11,12 @@ class Student
 public:
     Student();
     void SetStudentID(string student_ID) { studentID = student_ID; }
-    void SetFirst(string firstName) { first = firstName; }
-    void SetLast(string lastName) { last = lastName; }
+    void SetFirstName(string firstName) { first = firstName; }
+    void SetLastName(string lastName) { last = lastName; }
     void SetEmail(string emailAddress) { email = emailAddress; }
     void SetAge(int yearsAge) { age = yearsAge; }
-    void DaysCompletedCourse(int daysCompleteCourse[3]);
-    void SetProgram(DegreeProgram degreeProgram);
+    void SetDaysCompleteCourse(int daysCompleteCourse[3]);
+    void SetDegreeProgram(DegreeProgram degreeProgram);
     string GetStudentID() const { return studentID; }
     string GetFirstName() const { return first; }
     string GetLastName() const { return last; }
