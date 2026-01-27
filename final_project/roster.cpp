@@ -58,7 +58,58 @@ void Roster::printAll()
     }
 }
 
+void Roster::printAverageDayInCourse(string studentID)
+{
+    bool found = false;
+    for (int i = 0; i < classRosterArray.size(); ++i)
+    {
+        string currStudent = classRosterArray[i]->GetStudentID();
+        if (currStudent == studentID)
+        {
+            found = true;
+            const int *days = classRosterArray[i]->GetDaysToComplete();
+
+            double average = (days[0] + days[1] + days[2]) / 3.0;
+            cout << average << endl;
+            break;
+        }
+    }
+
+    if (found == false)
+    {
+        cout << "Error: 404 NOT FOUND" << endl;
+    }
+}
+
+void Roster::printInvalidEmails()
+{
+    for (int i = 0; i < classRosterArray.size(); ++i)
+    {
+        string studentEmail = classRosterArray[i]->GetEmailAddress();
+        if ((studentEmail.find('@') == string::npos) || (studentEmail.find(' ') != string::npos) || (studentEmail.find('.') == string::npos))
+        {
+            cout << "Invalid Email: " << studentEmail << endl;
+        }
+    }
+}
+
+void Roster::printByDegreeProgram(DegreeProgram degreeProgram)
+{
+    for (int i = 0; i < classRosterArray.size(); ++i)
+    {
+        DegreeProgram currStudent = classRosterArray[i]->GetProgram(); // remove this line???
+        if (currStudent == degreeProgram)
+        {
+            classRosterArray[i]->Print();
+        }
+    }
+}
+
 Roster::~Roster()
 {
-    // FIX ME - DESTRUCTOR
+    cout << "Destructor called on Roster" << endl;
+    for (int i = 0; i < classRosterArray.size(); ++i)
+    {
+        delete classRosterArray[i];
+    }
 }
