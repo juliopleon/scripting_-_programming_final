@@ -97,7 +97,7 @@ void Roster::printByDegreeProgram(DegreeProgram degreeProgram)
 {
     for (int i = 0; i < classRosterArray.size(); ++i)
     {
-        DegreeProgram currStudent = classRosterArray[i]->GetProgram(); // remove this line???
+        DegreeProgram currStudent = classRosterArray[i]->GetProgram();
         if (currStudent == degreeProgram)
         {
             classRosterArray[i]->Print();

@@ -5,15 +5,14 @@
 #include <iostream>
 using namespace std;
 
-string studentTable[5] = {"A1,John,Smith,John1989@gm ail.com,20,30,35,40,SECURITY", "A2,Suzan,Erickson,Erickson_1990@gmailcom,19,50,30,40,NETWORK", "A3,Jack,Napoli,The_lawyer99yahoo.com,19,20,40,33,SOFTWARE", "A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY", "A5,[firstname],[lastname],[emailaddress],[age],[numberofdaystocomplete3courses], SOFTWARE"};
+string studentTable[5] = {"A1,John,Smith,John1989@gm ail.com,20,30,35,40,SECURITY", "A2,Suzan,Erickson,Erickson_1990@gmailcom,19,50,30,40,NETWORK", "A3,Jack,Napoli,The_lawyer99yahoo.com,19,20,40,33,SOFTWARE", "A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY", "A5,Julio,Leon,julioleon.eng@gmail.com,26,14,20,25,SOFTWARE"};
 Roster classRoster;
-// string studentID;
 
 int main()
 {
 
-    cout << "Course: Scripting and Programming - Applications — C867 " << "Programming language: C++" << endl;
-    cout << "StudentID: 012738146 " << "Name: Julio Pena Leon" << endl;
+    cout << "Course: Scripting and Programming - Applications — C867 " << "\t" << "Programming language: C++" << endl;
+    cout << "StudentID: 012738146 " << "\t" << "Name: Julio Pena Leon" << endl;
     cout << endl;
     for (int i = 0; i < 5; ++i)
     {
@@ -72,7 +71,6 @@ int main()
     classRoster.remove("A3");
     classRoster.printAll();
     classRoster.remove("A3");
-    classRoster.~Roster();
 
     return 0;
 }

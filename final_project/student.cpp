@@ -30,7 +30,7 @@ void Student::Print()
         }
     }
     cout << "} ";
-    cout << "Degree Program: " << degree << endl; // FIX ME - needs grab enum value and convert it into a string
+    cout << "Degree Program: " << DegreeProgramToString(degree) << endl;
 };
 
 void Student::SetDaysCompleteCourse(int daysCompleteCourse[3])
