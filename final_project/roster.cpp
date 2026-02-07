@@ -70,7 +70,7 @@ void Roster::printAverageDayInCourse(string studentID)
             const int *days = classRosterArray[i]->GetDaysToComplete();
 
             double average = (days[0] + days[1] + days[2]) / 3.0;
-            cout << average << endl;
+            cout << "Student ID: " << currStudent << " Average days in 3 courses: " << average << endl;
             break;
         }
     }
